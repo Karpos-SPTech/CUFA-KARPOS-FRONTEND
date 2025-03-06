@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap");
+
+.text-3xl-regular {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 3.75rem;
+}
+
+.text-3xl-bold {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.text-3xl-extralight {
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  font-size: 2.5rem;
+  line-height: 2.75rem;
+}
+
+.text-2xl-regular {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+}
+
+.text-2xl-bold {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  font-style: normal;
+}
+
+.text-2xl-extralight {
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  font-style: normal;
+}
+
+.text-xl-regular {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+}
+
+.text-xl-bold {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+}
+
+.text-xl-extralight {
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+}
+
+.text-base-regular {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.text-base-bold {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-base-extralight {
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-sm-regular {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+.text-sm-bold {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+
+.text-sm-extralight {
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+
+.text-xs-regular {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+.text-xs-bold {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+.text-xs-extralight {
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
