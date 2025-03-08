@@ -1,125 +1,109 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.text-3xl-regular {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 3.75rem;
-}
-
-.text-3xl-bold {
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
-  font-size: 32px;
-}
-
-.text-3xl-extralight {
-  font-family: "Inter", sans-serif;
-  font-weight: 200;
-  font-size: 2.5rem;
-  line-height: 2.75rem;
-}
-
-.text-2xl-regular {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 2.25rem;
-}
-
-.text-2xl-bold {
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
-  font-size: 1.5rem;
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
   font-style: normal;
 }
 
-.text-2xl-extralight {
-  font-family: "Inter", sans-serif;
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
   font-weight: 200;
-  font-size: 1.5rem;
-  line-height: 2.25rem;
   font-style: normal;
 }
 
-.text-xl-regular {
-  font-family: "Inter", sans-serif;
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: 1.25rem;
-  line-height: 1.875rem;
+  font-style: normal;
 }
 
-.text-xl-bold {
-  font-family: "Inter", sans-serif;
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 1.25rem;
-  line-height: 1.875rem;
+  font-style: normal;
 }
 
-.text-xl-extralight {
-  font-family: "Inter", sans-serif;
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
   font-weight: 200;
-  font-size: 1.25rem;
-  line-height: 1.875rem;
+  font-style: italic;
 }
 
-.text-base-regular {
-  font-family: "Inter", sans-serif;
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: 1rem;
+  font-style: italic;
 }
 
-.text-base-bold {
-  font-family: "Inter", sans-serif;
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-style: italic;
 }
 
-.text-base-extralight {
-  font-family: "Inter", sans-serif;
-  font-weight: 200;
-  font-size: 1rem;
-  line-height: 1.5rem;
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
 }
 
-.text-sm-regular {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 0.875rem;
-}
-
-.text-sm-bold {
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-}
-
-.text-sm-extralight {
-  font-family: "Inter", sans-serif;
-  font-weight: 200;
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-}
-
-.text-xs-regular {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 0.75rem;
-  line-height: 1.125rem;
-}
-
-.text-xs-bold {
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
-  font-size: 0.75rem;
-  line-height: 1.125rem;
-}
-
-.text-xs-extralight {
-  font-family: "Inter", sans-serif;
-  font-weight: 200;
-  font-size: 0.75rem;
-  line-height: 1.125rem;
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
 }
