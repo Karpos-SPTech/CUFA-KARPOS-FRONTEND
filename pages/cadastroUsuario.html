@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cufa Conecta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styleCadastroUsuario.css">
+    <link rel="shortcut icon" href="../imgs/cropped-ANU-logo-cufa-192x192.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <div class="cabecalho">
+            <h1>CUFA</h1>
+        </div>
+
+        <p class="texto-acesso">Crie a sua conta</p>
+
+        <form class="formulario-login">
+            <div class="campo-input">
+                <input type="text" id="nome" name="nome" placeholder="Nome">
+            </div>
+           
+            <div class="campo-input">
+                <input type="email" id="email" name="email" placeholder="E-mail">
+            </div>
+            
+            <div class="campo-input">
+                <input type="password" id="senha" name="senha" placeholder="Senha">
+                <img src="../imgs/eyestrain 1.png" alt="Mostrar senha" class="olho-senha" onclick="toggleSenha()">
+            </div>
+          
+            <div class="campo-input">
+                <input type="password" id="confirmar_senha" name="confirmar_senha" placeholder="Confirme a sua senha">
+                <img src="../imgs/eyestrain 1.png" alt="Mostrar senha" class="olho-senha" onclick="toggleSenhaConfirmacao()">
+            </div>
+            <button class="botao-entrar">Cadastrar</button>
+
+            <p class="texto-cadastro">
+                Você já possui uma conta? <span class="cadastre-se"><a href="../pages/login.html">Entrar</a></span>
+            </p>
+        </form>
+    </div>
+
+    <script src="../script/script.js"></script>
+</body>
+
+</html>

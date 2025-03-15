@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cufa Conecta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styleCadastroEmpresa.css">
+    <link rel="shortcut icon" href="../imgs/cropped-ANU-logo-cufa-192x192.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <div class="cabecalho">
+            <h1>CUFA</h1>
+        </div>
+
+        <p class="texto-acesso">Cadastre a sua empresa</p>
+        <div class="formulario-login">
+            <div id="input-esquerda">
+                <div class="campo-input">
+                    <input type="text" id="nome" name="nome" placeholder="Nome">
+                </div>
+                <div class="campo-input">
+                    <input type="password" id="senha" name="senha" placeholder="Senha">
+                    <img src="../imgs/eyestrain 1.png" alt="Mostrar senha" class="olho-senha" onclick="toggleSenha()">
+                </div>
+                <div class="campo-input">
+                    <input type="text" id="cep" name="cep" placeholder="CEP">
+                </div>
+            </div>
+            <div id="input-direita">
+                <div class="campo-input">
+                    <input type="email" id="email" name="email" placeholder="E-mail">
+                </div>
+                <div class="campo-input">
+                    <input type="password" id="confirmar_senha" name="confirmar_senha" placeholder="Confirme a sua senha">
+                    <img src="../imgs/eyestrain 1.png" alt="Mostrar senha" class="olho-senha" onclick="toggleSenhaConfirmacao()">
+                </div>
+                <div class="campo-input">
+                    <input type="text" id="numero" name="numero" placeholder="Número">
+                </div>
+            </div>
+        </div>
+        <div class="campo-input campo-inferior">
+            <input type="text" id="endereco" name="endereco" placeholder="Endereço">
+        </div>
+        <div class="campo-input campo-inferior">
+            <input type="text" id="cnpj" name="cnpj" placeholder="CNPJ">
+        </div>
+        <div class="campo-input campo-inferior">
+            <input type="text" id="area" name="area" placeholder="Área">
+        </div>
+        <button class="botao-cadastrar">Cadastrar</button> <p class="texto-cadastro"> Você já possui uma conta? 
+            <span class="cadastre-se"><a href="../pages/login.html">Entrar</a></span></p>
+
+    <script src="../script/script.js"></script>
+</body>
+
+</html>

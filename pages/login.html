@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cufa Conecta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styleLogin.css">
+    <link rel="shortcut icon" href="../imgs/cropped-ANU-logo-cufa-192x192.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <div class="cabecalho">
+            <h1>CUFA</h1>
+        </div>
+
+        <p class="texto-acesso">Acesse a sua conta</p>
+
+        <form class="formulario-login">
+            <label for="email" class="label-campo">E-mail</label>
+            <div class="campo-input">
+                <img src="../imgs/image 14.png" alt="Ícone de email" class="icone">
+                <input type="email" id="email" name="email" placeholder="Digite seu email">
+            </div>
+
+            <label for="senha" class="label-campo" style="margin-top: 33px;">Senha</label>
+            <div class="campo-input">
+                <img src="../imgs/image 15.png" alt="Ícone de senha" class="icone">
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
+                <img src="../imgs/eyestrain 1.png" alt="Mostrar senha" class="olho-senha" onclick="toggleSenha()">
+            </div>
+            <p class="texto-esqueceu-senha">Esqueceu a senha?</p>
+            <button class="botao-entrar">Entrar</button>
+
+            <p class="texto-cadastro">
+                Você não possui conta? <span class="cadastre-se"><a href="../pages/loginEscolha.html">Cadastre-se</a></span>
+            </p>
+
+            <p class="texto-ou-entre">Ou entre com</p>
+
+            <div class="botoes-social">
+                <button class="botao-social google">
+                    <img src="../imgs/image 12.png" alt="Google" class="icone-social"> Google
+                </button>
+
+                <button class="botao-social microsoft">
+                    <img src="../imgs/microsoft_732221 1.png" alt="Microsoft" class="icone-social"> Microsoft
+                </button>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="../script/script.js"></script>
+</body>
+
+</html>
