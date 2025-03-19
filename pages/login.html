@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/styleLogin.css">
     <link rel="shortcut icon" href="../imgs/cropped-ANU-logo-cufa-192x192.png" type="image/x-icon">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 
 <body>
@@ -43,7 +44,7 @@
             <p class="texto-ou-entre">Ou entre com</p>
 
             <div class="botoes-social">
-                <button class="botao-social google">
+                <button class="botao-social google" onclick="logarComGoogle()">
                     <img src="../imgs/image 12.png" alt="Google" class="icone-social"> Google
                 </button>
 
@@ -55,7 +56,7 @@
         </form>
     </div>
 
-    <script src="../script/script.js"></script>
+    <script src="../script/scriptUser.js"></script>
 </body>
 
 </html>

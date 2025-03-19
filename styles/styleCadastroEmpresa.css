@@ -23,7 +23,7 @@ body {
     background-color: var(--cor-container);
     width: 90%;
     max-width: 800px;
-    height: 900px;
+    height: 850px;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
@@ -90,7 +90,7 @@ body {
 
 .campo-input {
     width: 320px; /* Largura fixa */
-    height: 89px; /* Altura fixa */
+    height: 68px; /* Altura fixa */
     background-color: white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
@@ -102,6 +102,7 @@ body {
 
 .campo-input input {
     font-size: 20px; /* Define um tamanho maior para o cursor */
+    font-weight: 600;
 }
 
 .campo-input input::placeholder {
