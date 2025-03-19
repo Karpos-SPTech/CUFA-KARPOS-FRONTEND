@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,10 +7,18 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="navbar">
-      <p>Início</p>
-      <p>Sobre</p>
-      <p>Login</p>
+    <div class="navbar" id="inicio">
+      <button
+        onclick="document.getElementById('cards').scrollIntoView({ behavior: 'smooth' })"
+      >
+        Sobre
+      </button>
+      <button
+        onclick="document.getElementById('footer').scrollIntoView({ behavior: 'smooth' })"
+      >
+        Contatos
+      </button>
+      <button>Login</button>
     </div>
     <div class="container-logo">
       <img src="../assets/images/logo-cufa.png" class="logo" />
@@ -31,7 +39,7 @@
       <img src="../assets/images/img-left.png" class="img-left" />
     </div>
     <div class="container-cards">
-      <div class="card">
+      <div class="card um" id="cards">
         <h2>Centralização de Vagas de Emprego</h2>
         <p>
           Uma plataforma que centraliza vagas de emprego, conectando
@@ -40,7 +48,7 @@
         </p>
         <img src="../assets/images/periferia1.svg" class="cards-img" />
       </div>
-      <div class="card">
+      <div class="card dois">
         <h2>Maior Visibilidade de Currículo</h2>
         <p>
           Ampliamos a visibilidade dos currículos, permitindo que recrutadores
@@ -51,7 +59,7 @@
         <img src="../assets/images/periferia2.svg" class="cards-img" />
       </div>
 
-      <div class="card">
+      <div class="card tres">
         <h2>Acessibilidade e Facilidade</h2>
         <p>
           Um sistema é intuitivo e fácil de usar, criado para atender pessoas
@@ -62,5 +70,139 @@
         <img src="../assets/images/periferia-noite.svg" class="cards-img" />
       </div>
     </div>
+
+    <section>
+      <button class="arrow-right" onclick="moveLeft()">
+        <img src="../assets/icons/arrow-right.svg" alt="seta para direita" />
+      </button>
+      <h2>Nossos Parceiros</h2>
+      <img src="../assets/images/Ellipse 2.svg" />
+      <div class="slider-container">
+        <div class="slider">
+          <div class="slider-track">
+            <div class="slide">
+              <img src="../assets/images/bradesco-logo.svg" alt="Logo 1" />
+            </div>
+            <div class="slide">
+              <img src="../assets/images/c6-logo.svg" alt="Logo 2" />
+            </div>
+            <div class="slide">
+              <img src="../assets/images/cufa-logo.svg" alt="Logo 3" />
+            </div>
+            <div class="slide">
+              <img src="../assets/images/radix-logo.svg" alt="Logo 4" />
+            </div>
+            <div class="slide">
+              <img src="../assets/images/sptech-logo.svg" alt="Logo 5" />
+            </div>
+            <div class="slide">
+              <img src="../assets/images/v8-logo.svg" alt="Logo 6" />
+            </div>
+            <div class="slide">
+              <img src="../assets/images/stefanini-logo.svg" alt="Logo 7" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="arrow-left" onclick="moveRight()">
+        <img src="../assets/icons/arrow-left.svg" alt="seta para esquerda" />
+      </button>
+    </section>
+    <div class="purpose">
+      <div class="part mission">
+        <img src="../assets/icons/mission.svg" alt="" />
+        <h2>Missão</h2>
+        <p>
+          Visamos promover a inclusão social e econômica de pessoas em
+          vulnerabilidade, especialmente em favelas e periferias, por meio de
+          uma plataforma digital que oferece ferramentas para acesso ao mercado
+          de trabalho.
+        </p>
+      </div>
+      <img src="../assets/icons/line.svg" alt="">
+      <div class="part vision">
+        <img src="../assets/icons/vision.svg" alt="" />
+        <h2>Visão</h2>
+        <p>
+          Plataforma digital dedicada à inclusão profissional, conectando
+          comunidades periféricas ao mercado de trabalho formal, quebrando
+          barreiras socioeconômicas e promovendo um futuro mais justo e
+          igualitário para pessoas em situação de vulnerabilidade.
+        </p>
+      </div>
+      <img src="../assets/icons/line.svg" alt="" class="line">
+      <div class="part values">
+        <img src="../assets/icons/values.svg" alt="" />
+        <h2>Valores</h2>
+        <p>
+          Acreditamos no potencial de cada indivíduo, criando oportunidades para
+          promover a transformação social, superar desigualdades e empoderar
+          pessoas em vulnerabilidade com ferramentas para melhorar suas
+          condições e alcançar objetivos profissionais.
+        </p>
+      </div>
+    </div>
+    <div class="footer">
+      <button
+        class="btn-up"
+        onclick="document.getElementById('inicio').scrollIntoView({ behavior: 'smooth' })"
+      >
+        <div class="btn-up-content">
+          <img src="../assets/icons/arrow-up.svg" alt="seta para cima" />
+          <p>CUFA</p>
+        </div>
+      </button>
+      <h1>Oportunidades reais para quem mais precisa</h1>
+      <div class="footer-content" id="footer">
+        <div class="contact">
+          <h2>Contato</h2>
+          <p>
+            cufaconecta@gmail.com
+            <img src="../assets/icons/email.svg" alt="icone de email" />
+          </p>
+          <p>
+            +55 11 94002-8922
+            <img src="../assets/icons/smartphone.svg" alt="icone de celular" />
+          </p>
+          <p>
+            4002-8922
+            <img
+              src="../assets/icons/telephone.svg"
+              alt="icone de telefone fixo"
+            />
+          </p>
+        </div>
+        <div class="networks">
+          <h2>Redes</h2>
+          <p>
+            Instagram
+            <img src="../assets/icons/instagram.svg" alt="icone do instagram" />
+          </p>
+          <p>
+            Whatsapp
+            <img src="../assets/icons/whatsapp.svg" alt="icone do whatsapp" />
+          </p>
+          <p>
+            Linkedin
+            <img src="../assets/icons/linkedin.svg" alt="icone do linkedin" />
+          </p>
+        </div>
+        <div class="findUs">
+          <h2>Encontre-nos</h2>
+          <p>
+            <a href="https://maps.app.goo.gl/tEzJi94qR4FvzcwG7" target="_blank"
+              >Rua Rodrigues Maciel, 210 </a
+            ><img src="../assets/icons/map.svg" alt="icone de mapa" />
+          </p>
+          <p>
+            <a href="https://maps.app.goo.gl/jtpgGDWUUZgyRGkf9" target="_blank"
+              >Rua Haddock Lobo, 595</a
+            ><img src="../assets/icons/map.svg" alt="icone de mapa" />
+          </p>
+        </div>
+      </div>
+      <h2>Todos os direitos reservados por Karpos © 2024.</h2>
+    </div>
   </body>
+  <script src="./script.js"></script>
 </html>
