@@ -133,10 +133,10 @@ async function logar() {
     }
 }
 
-function logarComGoogle() {
-    event.preventDefault();
-    google.accounts.id.prompt();
-}
+// function logarComGoogle() {
+//     event.preventDefault();
+//     google.accounts.id.prompt();
+// }
 
 function handleCredentialResponse(response) {
     const credential = response.credential;
@@ -148,7 +148,7 @@ function handleCredentialResponse(response) {
     const novoUsuario = {
         nome: userData.name,
         email: userData.email,
-        foto: userData.picture
+        senha: userData.sub
     };
 
     salvarUsuario(novoUsuario);
@@ -162,12 +162,24 @@ function parseJwt(token) {
 
     return JSON.parse(jsonPayload);
 }
-
 window.onload = function () {
     google.accounts.id.initialize({
         client_id: "296975099929-nnk3hihf30cdoh9qfveb1map9qt1h6c6.apps.googleusercontent.com",
-        callback: handleCredentialResponse
+        callback: handleCredentialResponse,
+        login_uri: "http://localhost:5500/pages/login.html"
     });
+
+    google.accounts.id.renderButton(
+        document.getElementById("g_id_signin"),
+        { 
+            theme: "outline",
+            size: "large",
+            shape: "circle",
+            text: "continue_with"
+        }
+    );
+
+    google.accounts.id.prompt();
 };
 
 async function salvarUsuario(usuario) {
