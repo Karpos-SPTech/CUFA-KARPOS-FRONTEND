@@ -11,7 +11,42 @@
       "nome": "ALE",
       "email": "alebenefri@gmail.com",
       "foto": "https://lh3.googleusercontent.com/a/ACg8ocKRkX4QGm6nHJ0UzC-xq8x9RPhk1xmFRejSTCcymv3fr2geTAbO=s96-c"
+    },
+    {
+      "id": "7d35",
+      "nome": "Cufa1",
+      "email": "alebenefri@gmail.com",
+      "senha": "Abf191005!"
+    },
+    {
+      "id": "8914",
+      "nome": "Cufawefdfs",
+      "email": "alebenefri@gmail.com",
+      "senha": "Abf191005!"
     }
   ],
-  "empresas": []
+  "empresas": [
+    {
+      "id": "366b",
+      "nome": "Alexandre Benevides Frizon",
+      "email": "alebenefri@gmail.com",
+      "cep": "08485-300",
+      "senha": "12345678A!",
+      "numero": "525",
+      "endereco": "Rua Senador Nelson Carneiro - Conjunto Habitacional Santa Etelvina II, São Paulo - SP",
+      "cnpj": "1",
+      "area": "1"
+    },
+    {
+      "id": "04fd",
+      "nome": "Alexandre Benevides Frizon",
+      "email": "alebenefri@gmail.com",
+      "cep": "08485-300",
+      "senha": "Abf191005!",
+      "numero": "525",
+      "endereco": "Rua Senador Nelson Carneiro - Conjunto Habitacional Santa Etelvina II, São Paulo - SP",
+      "cnpj": "12.345.677/8777-77",
+      "area": "arroz"
+    }
+  ]
 }

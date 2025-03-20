@@ -1,4 +1,3 @@
-// Função para alternar a visibilidade da senha
 function toggleSenha() {
     let senhaInput = document.getElementById('senha');
     senhaInput.type = senhaInput.type === 'password' ? 'text' : 'password';
@@ -18,23 +17,25 @@ let enderecoInput = document.getElementById('endereco');
 let cnpjInput = document.getElementById('cnpj');
 let areaInput = document.getElementById('area');
 let confirmSenhaInput = document.getElementById('confirmar_senha');
+let divMensagem = document.getElementById('divMensagem');
 
 cnpjInput.addEventListener('input', function (event) {
-    let cnpj = event.target.value.replace(/\D/g, '');
+    let cnpj = event.target.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
 
     if (cnpj.length > 14) {
-        cnpj = cnpj.slice(0, 14);
+        cnpj = cnpj.slice(0, 14); // Garante que o CNPJ não tenha mais de 14 dígitos
     }
 
     event.target.value = cnpj
-        .replace(/^(\d{2})(\d)/, '$1.$2')
+        .replace(/^(\d{2})(\d)/, '$1.$2')                 // Formata o CNPJ
         .replace(/^(\d{2})\.(\d{3})(\d)/, '$1.$2.$3')
         .replace(/\.(\d{3})(\d)/, '.$1/$2')
         .replace(/(\d{4})(\d)/, '$1-$2');
+
 });
 
 document.getElementById("cep").addEventListener("input", function () {
-    let cep = this.value.replace(/\D/g, ""); // Remove tudo que não for número
+    let cep = this.value.replace(/\D/g, "");
 
     if (cep.length > 5) {
         this.value = `${cep.slice(0, 5)}-${cep.slice(5, 8)}`;
@@ -44,7 +45,7 @@ document.getElementById("cep").addEventListener("input", function () {
 });
 
 document.getElementById("cep").addEventListener("input", function () {
-    let cep = this.value.replace(/\D/g, ""); // Remove tudo que não for número
+    let cep = this.value.replace(/\D/g, "");
 
     if (cep.length > 5) {
         this.value = `${cep.slice(0, 5)}-${cep.slice(5, 8)}`;
@@ -57,7 +58,8 @@ document.getElementById("cep").addEventListener("blur", async function () {
     let cep = this.value.replace(/\D/g, "");
 
     if (cep.length !== 8) {
-        alert("CEP inválido! Deve conter 8 dígitos.");
+        divMensagem.style.display = "flex"
+        divMensagem.innerText = "CEP inválido! Deve conter 8 dígitos.";
         return;
     }
 
@@ -66,7 +68,7 @@ document.getElementById("cep").addEventListener("blur", async function () {
         let data = await response.json();
 
         if (data.erro) {
-            alert("CEP não encontrado!");
+            document.getElementById("endereco").value = "CEP não encontrado!";
             return;
         }
 
@@ -76,39 +78,48 @@ document.getElementById("cep").addEventListener("blur", async function () {
 
     } catch (error) {
         console.error("Erro ao buscar CEP:", error);
-        alert("Erro ao buscar o endereço. Tente novamente.");
+        document.getElementById("endereco").value = "Erro ao buscar o endereço. Tente novamente.";
     }
 });
 
-
-
-async function validarCadastroEmpresa() {
+function validarCadastroEmpresa() {
     if (!nomeInput.value || !emailInput.value || !cepInput.value || !senhaInput.value || !numeroInput.value || !enderecoInput.value || !cnpjInput.value || !areaInput.value || !confirmSenhaInput.value) {
-        alert("Todos os campos devem ser preenchidos.");
+        divMensagem.style.display = "flex"
+        divMensagem.innerText = "Todos os campos devem ser preenchidos."
         return false;
     }
+    if (cnpjInput.value.length != 14) {
+        divMensagem.style.display = "flex";
+        divMensagem.innerText = "CNPJ inválido! Deve conter 14 dígitos.";
+    }
     if (!emailInput.value.includes("@") || !emailInput.value.includes(".com")) {
-        alert("Por favor, insira um email válido.");
+        divMensagem.style.display = "flex"
+        divMensagem.innerText = "Por favor, insira um email válido.";
         return false;
     }
     if (senhaInput.value.length < 8) {
-        alert("A senha deve ter pelo menos 8 caracteres.");
+        divMensagem.style.display = "flex"
+        divMensagem.innerText = "A senha deve ter pelo menos 8 caracteres.";
         return false;
     }
     if (!/[A-Z]/.test(senhaInput.value)) {
-        alert("A senha deve conter pelo menos uma letra maiúscula.");
+        divMensagem.style.display = "flex"
+        divMensagem.innerText = "A senha deve conter pelo menos uma letra maiúscula.";
         return false;
     }
     if (!/\d/.test(senhaInput.value)) {
-        alert("A senha deve conter pelo menos um número.");
+        divMensagem.style.display = "flex"
+        divMensagem.innerText = "A senha deve conter pelo menos um número.";
         return false;
     }
     if (!/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(senhaInput.value)) {
-        alert("A senha deve conter pelo menos um caractere especial.");
+        divMensagem.style.display = "flex"
+        divMensagem.innerText = "A senha deve conter pelo menos um caractere especial.";
         return false;
     }
     if (senhaInput.value !== confirmSenhaInput.value) {
-        alert("As senhas não são iguais.");
+        divMensagem.style.display = "flex"
+        divMensagem.innerText = "As senhas não são iguais.";
         return false;
     }
 
