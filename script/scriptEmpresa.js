@@ -20,17 +20,36 @@ let confirmSenhaInput = document.getElementById('confirmar_senha');
 let divMensagem = document.getElementById('divMensagem');
 
 cnpjInput.addEventListener('input', function (event) {
-    let cnpj = event.target.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+    let cnpj = event.target.value.replace(/\D/g, '');
 
     if (cnpj.length > 14) {
-        cnpj = cnpj.slice(0, 14); // Garante que o CNPJ não tenha mais de 14 dígitos
+        cnpj = cnpj.slice(0, 14);
     }
 
     event.target.value = cnpj
-        .replace(/^(\d{2})(\d)/, '$1.$2')                 // Formata o CNPJ
+        .replace(/^(\d{2})(\d)/, '$1.$2')
         .replace(/^(\d{2})\.(\d{3})(\d)/, '$1.$2.$3')
         .replace(/\.(\d{3})(\d)/, '.$1/$2')
         .replace(/(\d{4})(\d)/, '$1-$2');
+
+    if (cnpj.length === 14) {
+        fetch(`https://publica.cnpj.ws/cnpj/${cnpjInput.value.replace(/\D/g, '')}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.razao_social) {
+                    console.log("CNPJ válido:", data);
+                    divMensagem.style.display = "none";
+                } else {
+                    divMensagem.style.display = "flex";
+                    divMensagem.innerText = "CNPJ inválido! Verifique os dados.";
+                }
+            })
+            .catch(error => {
+                console.error("Erro ao validar o CNPJ:", error);
+                divMensagem.style.display = "flex";
+                divMensagem.innerText = "Erro ao validar o CNPJ.";
+            });
+    }
 
 });
 

@@ -1,3 +1,7 @@
+let nomeInput = document.getElementById('nome');
+let emailInput = document.getElementById('email');
+let senhaInput = document.getElementById('senha');
+
 async function logar() {
     event.preventDefault();
 
@@ -5,7 +9,13 @@ async function logar() {
     const senha = senhaInput.value;
 
     if (!email || !senha) {
-        alert("Por favor, preencha todos os campos.");
+        divMensagem.style.display = "flex";
+        divMensagem.innerText = "Por favor, preencha todos os campos.";
+        return;
+    }
+    if (!emailInput.value.includes("@") || !emailInput.value.includes(".com")) {
+        divMensagem.style.display = "flex"
+        divMensagem.innerText = "Por favor, insira um email válido.";
         return;
     }
 
@@ -22,35 +32,38 @@ async function logar() {
         const empresa = empresas.find(e => e.email === email);
 
         if (!user && !empresa) {
-            alert("Email não encontrado.");
+            divMensagem.style.display = "flex";
+            divMensagem.innerText = "Email não encontrado.";
             return;
         }
 
         if (user && user.senha === senha) {
             console.log("Usuário logado com sucesso:", user);
-            window.location.href = "sim.html";
+            window.location.href = "cufaSystem.html";
             return;
         }
 
         if (empresa && empresa.senha === senha) {
             console.log("Empresa logada com sucesso:", empresa);
-            window.location.href = "sim.html";
+            window.location.href = "cufaSystem.html";
             return;
         }
 
-        alert("Senha incorreta.");
+        divMensagem.style.display = "flex";
+        divMensagem.innerText = "Senha incorreta.";
 
     } catch (error) {
         console.error("Erro ao realizar o login:", error);
-        alert("Erro ao tentar fazer login. Tente novamente.");
+        divMensagem.style.display = "flex";
+        divMensagem.innerText = "Erro ao tentar fazer login. Tente novamente.";
     }
 }
 
 function handleCredentialResponse(response) {
     const credential = response.credential;
-    
+
     const userData = parseJwt(credential);
-    
+
     console.log("Usuário logado:", userData);
 
     const novoUsuario = {
@@ -65,7 +78,7 @@ function handleCredentialResponse(response) {
 function parseJwt(token) {
     let base64Url = token.split('.')[1];
     let base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-    let jsonPayload = decodeURIComponent(atob(base64).split('').map(c => 
+    let jsonPayload = decodeURIComponent(atob(base64).split('').map(c =>
         '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
 
     return JSON.parse(jsonPayload);
@@ -79,7 +92,7 @@ window.onload = function () {
 
     google.accounts.id.renderButton(
         document.getElementById("g_id_signin"),
-        { 
+        {
             theme: "outline",
             size: "large",
             shape: "circle",
@@ -103,9 +116,10 @@ async function salvarUsuario(usuario) {
         }
 
         console.log("Usuário salvo com sucesso!");
-        window.location.href = "sim.html";
+        window.location.href = "cufaSystem.html";
     } catch (error) {
         console.error("Erro ao salvar usuário:", error);
-        alert("Erro ao salvar usuário. Tente novamente.");
+        divMensagem.style.display = "flex";
+        divMensagem.innerText = "Erro ao salvar usuário. Tente novamente.";
     }
 }

@@ -78,16 +78,16 @@ function cadastrarUsuario() {
             },
             body: JSON.stringify({ nome, email, senha })
         })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Erro ao cadastrar usuário.");
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log("Usuário cadastrado:", data);
-            window.location.href = "login.html";
-        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Erro ao cadastrar usuário.");
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log("Usuário cadastrado:", data);
+                window.location.href = "login.html";
+            })
     } catch (error) {
         console.error("Erro ao cadastrar:", error);
         divMensagem.style.display = "flex";
