@@ -59,11 +59,11 @@ body::-webkit-scrollbar {
 .right {
     display: flex;
     justify-content: flex-end;
-    margin-top: -30%;
+    margin-top: -41%;
 
 
     .img-right {
-        width: 40%;
+        width: 50%;
         height: 55%;
         position: relative;
         z-index: 2;
@@ -83,7 +83,7 @@ body::-webkit-scrollbar {
 .left {
     display: flex;
     justify-content: flex-start;
-    margin-top: -25%;
+    margin-top: -40%;
 
     .img-left {
         width: 30%;
@@ -150,31 +150,50 @@ body::-webkit-scrollbar {
 
 .card {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     background-color: var(--color-primary-900);
     width: 344px;
     height: 411px;
     border-radius: 25px;
     flex-direction: column;
-    margin-top: -15%;
+    margin-top: -24%;
     z-index: 5;
+    padding-top: 10px;
+    padding-inline: 10px;
+    align-items: center;
 
     &.um {
-        gap: 3rem;
+        h2{
+            margin-bottom: 17.7px;
+        }
+
+        
     }
 
     &.dois {
-        gap: 2.3rem;
+        padding-inline: 10px;
+        h2{
+            margin-bottom: 17.7px;
+        }
+        p{
+            margin-bottom: 12px;
+        }
     }
 
     &.tres {
-        gap: 4rem;
+        padding-inline: 20px;
+        h2{
+            margin-bottom: 17.7px;
+        }
+        p{
+            margin-bottom: 37px;
+        }
     }
 
     p {
         font-family: "Poppins", sans-serif;
-        font-weight: 400;
-        font-size: 100%;
+        font-weight: 500;
+        font-size: 17px;
         font-style: normal;
         color: var(--color-primary-100);
         text-align: center;
@@ -182,7 +201,7 @@ body::-webkit-scrollbar {
 
     h2 {
         font-family: "Poppins", sans-serif;
-        font-weight: 400;
+        font-weight: 600;
         font-style: normal;
         color: var(--color-primary-100);
         text-align: center;
@@ -192,6 +211,7 @@ body::-webkit-scrollbar {
 .cards-img {
     width: 344px;
     height: 150px;
+    bottom: 0%;
 }
 
 section {
@@ -199,7 +219,7 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 10%;
+    margin-top: 6%;
 
     h2 {
         font-family: "Paytone One", sans-serif;
@@ -215,16 +235,18 @@ section {
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 90%;
-    max-width: 1300px;
+    width: 95%;
     overflow: hidden;
-    margin: 2rem auto;
+    margin: 6rem auto 1rem auto;
+}
 
+.seta{
+    height: 55px;
 }
 
 .slider {
     display: flex;
-    width: 100%;
+    width: 85%;
     overflow: hidden;
 }
 
@@ -243,8 +265,8 @@ section {
 }
 
 .slide img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 70%;
+    max-height: 70%;
 }
 
 .arrow-left {
@@ -275,21 +297,33 @@ section {
     color: white;
     align-items: center;
     flex-direction: column;
-    gap: 6rem;
+    gap: 4rem;
+    padding-bottom: 20px;
 }
 
 .footer-content {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: row;
     justify-content: space-around;
     gap: 18rem;
+
+    p{
+        display: flex;
+        align-items: center;
+        gap: 5%;
+        width: -webkit-fill-available;
+    }
+
+    img{
+        height: 15px;
+    }
 }
 
 .contact {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     gap: 1rem;
 }
@@ -297,7 +331,7 @@ section {
 .networks {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     gap: 1rem;
 }
@@ -305,14 +339,15 @@ section {
 .findUs {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     gap: 1rem;
+    width: 249px;
 }
 
 h1 {
     font-family: "Paytone One", sans-serif;
-    font-size: 2rem;
+    font-size: 2.3rem;
     font-weight: 400;
     font-style: normal;
 }
@@ -351,6 +386,7 @@ p {
         font-size: 2rem;
         font-weight: 400;
         font-style: normal;
+        margin-bottom: 25px;
     }
 
 
@@ -360,7 +396,7 @@ p {
     display: flex;
     flex-direction: row;
     margin-top: 3rem;
-    padding: 3rem;
+    padding: 3rem 7rem;
     height: auto;
     justify-content: space-between;
 
@@ -370,11 +406,12 @@ p {
         font-size: 2rem;
         font-weight: 400;
         font-style: normal;
+        margin-bottom: 20px;
     }
 
     p {
         font-family: "Asap", sans-serif;
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         font-weight: 400;
         font-style: normal;
         color: #666666;
@@ -386,6 +423,7 @@ p {
 
     img {
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        margin-bottom: 5px;
     }
 
 

@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cufa Conecta</title>
+  <title>CUFA Conecta</title>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="shortcut icon" href="/src/assets/icons/cufaicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="../assets/icons/cufaicon.png" type="image/x-icon">
 </head>
 
 <body>
@@ -71,28 +71,28 @@
   </div>
 
   <section>
-    <button class="arrow-right" onclick="moveLeft()">
-      <img src="../assets/icons/arrow-right.svg" alt="seta para direita" />
-    </button>
     <h2>Nossos Parceiros</h2>
     <img src="../assets/images/Ellipse 2.svg" />
     <div class="slider-container">
+      <button class="arrow-right" onclick="moveLeft()">
+        <img src="../assets/icons/arrow-right.svg" class="seta" alt="seta para direita" />
+      </button>
       <div class="slider">
         <div class="slider-track">
           <div class="slide">
-            <img src="../assets/images/bradesco-logo.svg" alt="Logo 1" />
+            <img src="../assets/images/bradesco-logo.png" alt="Logo 1" />
           </div>
           <div class="slide">
-            <img src="../assets/images/c6-logo.svg" alt="Logo 2" />
+            <img src="../assets/images/c6-logo.png" alt="Logo 2" />
           </div>
           <div class="slide">
-            <img src="../assets/images/cufa-logo.svg" alt="Logo 3" />
+            <img src="../assets/images/cufa-logo.png" alt="Logo 3" />
           </div>
           <div class="slide">
             <img src="../assets/images/radix-logo.svg" alt="Logo 4" />
           </div>
           <div class="slide">
-            <img src="../assets/images/sptech-logo.svg" alt="Logo 5" />
+            <img src="../assets/images/sptech-logo.png" alt="Logo 5" />
           </div>
           <div class="slide">
             <img src="../assets/images/v8-logo.svg" alt="Logo 6" />
@@ -102,10 +102,11 @@
           </div>
         </div>
       </div>
+      <button class="arrow-left" onclick="moveRight()">
+        <img src="../assets/icons/arrow-left.svg" class="seta" alt="seta para esquerda" />
+      </button>
     </div>
-    <button class="arrow-left" onclick="moveRight()">
-      <img src="../assets/icons/arrow-left.svg" alt="seta para esquerda" />
-    </button>
+
   </section>
   <div class="purpose">
     <div class="part mission">
@@ -145,7 +146,7 @@
     <button class="btn-up" onclick="document.getElementById('inicio').scrollIntoView({ behavior: 'smooth' })">
       <div class="btn-up-content">
         <img src="../assets/icons/arrow-up.svg" alt="seta para cima" />
-        <p>CUFA</p>
+        <p>VOLTAR</p>
       </div>
     </button>
     <h1>Oportunidades reais para quem mais precisa</h1>
@@ -183,11 +184,15 @@
       <div class="findUs">
         <h2>Encontre-nos</h2>
         <p>
-          <a href="https://maps.app.goo.gl/tEzJi94qR4FvzcwG7" target="_blank">Rua Rodrigues Maciel, 210 </a><img
+          <a href="https://maps.app.goo.gl/tEzJi94qR4FvzcwG7" target="_blank">Rua José Rodrigues Maciel, 617</a><img
             src="../assets/icons/map.svg" alt="icone de mapa" />
         </p>
         <p>
           <a href="https://maps.app.goo.gl/jtpgGDWUUZgyRGkf9" target="_blank">Rua Haddock Lobo, 595</a><img
+            src="../assets/icons/map.svg" alt="icone de mapa" />
+        </p>
+        <p>
+          <a href="https://maps.app.goo.gl/SFJt7itv3CZXfE9b7" target="_blank">Rua Francisco Batista, 1</a><img
             src="../assets/icons/map.svg" alt="icone de mapa" />
         </p>
       </div>
