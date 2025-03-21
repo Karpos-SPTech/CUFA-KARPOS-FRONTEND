@@ -17,7 +17,8 @@
     <button onclick="document.getElementById('footer').scrollIntoView({ behavior: 'smooth' })">
       Contatos
     </button>
-    <button>Login</button>
+    <button style="display: flex; justify-content: center; align-items: center; gap: 5px;">Login<img
+        src="../assets/images/cadeado.png" height="21px" alt=""></button>
   </div>
   <div class="container-logo">
     <img src="../assets/images/logo-cufa.png" class="logo" />
@@ -37,6 +38,16 @@
     <img src="../assets/images/Rectangle 38.png" class="behind-ellipsis" />
     <img src="../assets/images/img-left.png" class="img-left" />
   </div>
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
   <div class="container-cards">
     <div class="card um" id="cards">
       <h2>Centralização de Vagas de Emprego</h2>
@@ -199,16 +210,6 @@
     </div>
     <h2>Todos os direitos reservados por Karpos © 2024.</h2>
   </div>
-  <script type="text/javascript" src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script type="text/javascript">
-    window.onload = function () {
-      if (window.VLibras && window.VLibras.Widget) {
-        new window.VLibras.Widget();
-      } else {
-        console.error("VLibras não foi carregado corretamente.");
-      }
-    };
-  </script>
 </body>
 <script src="./script.js"></script>
 

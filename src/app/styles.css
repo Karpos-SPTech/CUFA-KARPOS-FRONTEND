@@ -23,8 +23,9 @@ body::-webkit-scrollbar {
 .logo {
     position: absolute;
     z-index: 1;
-    width: 30vw;
+    width: 25vw;
     height: auto;
+    margin: 30px;
 }
 
 .rectangle-left {
@@ -46,7 +47,7 @@ body::-webkit-scrollbar {
 
     button {
         font-family: "Poppins", sans-serif;
-        font-size: 30px;
+        font-size: 22px;
         font-weight: 400;
         font-style: normal;
         color: var(--color-primary-900);
@@ -71,10 +72,10 @@ body::-webkit-scrollbar {
 
     .rectangle-right {
         position: absolute;
-        width: 17%;
-        height: 150%;
+        width: 20.7%;
+        height: 100%;
         z-index: 1;
-        top: 0;
+        top: -1%;
         right: 0;
     }
 
@@ -89,15 +90,16 @@ body::-webkit-scrollbar {
         width: 30%;
         position: relative;
         z-index: 2;
-
+        left: -0.1%;
     }
 
     .behind-ellipsis {
         position: absolute;
         width: 30%;
-        height: 40%;
+        height: 100%;
+        top: 80%;
         z-index: 1;
-        left: 0;
+        left: -0.5%;
     }
 }
 
