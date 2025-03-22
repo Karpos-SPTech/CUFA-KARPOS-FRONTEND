@@ -7,12 +7,6 @@
       "senha": "Abf191005!"
     },
     {
-      "id": "6ffc",
-      "nome": "ALE",
-      "email": "alebenefri@gmail.com",
-      "foto": "https://lh3.googleusercontent.com/a/ACg8ocKRkX4QGm6nHJ0UzC-xq8x9RPhk1xmFRejSTCcymv3fr2geTAbO=s96-c"
-    },
-    {
       "id": "7d35",
       "nome": "Cufa1",
       "email": "alebenefri@gmail.com",
@@ -23,6 +17,18 @@
       "nome": "Cufawefdfs",
       "email": "alebenefri@gmail.com",
       "senha": "Abf191005!"
+    },
+    {
+      "id": "1091",
+      "nome": "ALE",
+      "email": "alebenefri@gmail.com",
+      "senha": "118323248701016139747"
+    },
+    {
+      "id": "c1b8",
+      "nome": "ALE",
+      "email": "alebenefri@gmail.com",
+      "senha": "118323248701016139747"
     }
   ],
   "empresas": [
@@ -80,6 +86,61 @@
       "endereco": "Rua Senador Nelson Carneiro - Conjunto Habitacional Santa Etelvina II, São Paulo - SP",
       "cnpj": "11.111.111/1111-11",
       "area": "Arroz"
+    },
+    {
+      "id": "4030",
+      "nome": "Alexandre Benevides Frizon",
+      "email": "alebenefri@gmail.com",
+      "cep": "08485-300",
+      "senha": "Abf191005!",
+      "numero": "525",
+      "endereco": "Rua Senador Nelson Carneiro - Conjunto Habitacional Santa Etelvina II, São Paulo - SP",
+      "cnpj": "45.543.915/0001-81",
+      "area": "Arroz"
+    },
+    {
+      "id": "2179",
+      "nome": "Alexandre",
+      "email": "alebenefri@gmail.com",
+      "cep": "08485-300",
+      "senha": "Alexandre@123",
+      "numero": "525",
+      "endereco": "Rua Senador Nelson Carneiro - Conjunto Habitacional Santa Etelvina II, São Paulo - SP",
+      "cnpj": "75.315.333/0001-09",
+      "area": "Estudante"
+    },
+    {
+      "id": "969b",
+      "nome": "Alex",
+      "email": "alex.barreira@gmail.com",
+      "cep": "08270-340",
+      "senha": "Alex@12345",
+      "numero": "38A",
+      "endereco": "Rua Ponta de Lucena - Jardim Marabá, São Paulo - SP",
+      "cnpj": "75.315.333/0001-09",
+      "area": "Estudante"
+    },
+    {
+      "id": "b6d7",
+      "nome": "cufa",
+      "email": "cufa@gmail.com",
+      "cep": "08485-300",
+      "senha": "Cufa@gmail1",
+      "numero": "525",
+      "endereco": "Rua Senador Nelson Carneiro - Conjunto Habitacional Santa Etelvina II, São Paulo - SP",
+      "cnpj": "75.315.333/0001-09",
+      "area": "ONG"
+    },
+    {
+      "id": "891a",
+      "nome": "cufa conecta",
+      "email": "cufaconecta@gmail.com",
+      "cep": "08485-301",
+      "senha": "Cufaconecta@1",
+      "numero": "525",
+      "endereco": "Rua Senador Nelson Carneiro - Conjunto Habitacional Santa Etelvina II, São Paulo - SP",
+      "cnpj": "75.315.333/0001-09",
+      "area": "ONG"
     }
   ]
 }

@@ -38,7 +38,6 @@ cnpjInput.addEventListener('input', function (event) {
             .then(data => {
                 if (data.razao_social) {
                     console.log("CNPJ válido:", data);
-                    divMensagem.style.display = "none";
                 } else {
                     divMensagem.style.display = "flex";
                     divMensagem.innerText = "CNPJ inválido! Verifique os dados.";

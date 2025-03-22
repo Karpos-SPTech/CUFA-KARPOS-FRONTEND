@@ -46,3 +46,6 @@ sliderContainer.addEventListener('mouseleave', () => {
   autoplayInterval = setInterval(moveRight, 3000);
 });
 
+function login(){
+  window.location.href = "../../pages/login.html"
+}
