@@ -26,6 +26,9 @@ cnpjInput.addEventListener('input', function (event) {
         cnpj = cnpj.slice(0, 14);
     }
 
+    divMensagem.style.display = "none";
+    divMensagem.innerText = "";
+
     event.target.value = cnpj
         .replace(/^(\d{2})(\d)/, '$1.$2')
         .replace(/^(\d{2})\.(\d{3})(\d)/, '$1.$2.$3')
@@ -41,12 +44,14 @@ cnpjInput.addEventListener('input', function (event) {
                 } else {
                     divMensagem.style.display = "flex";
                     divMensagem.innerText = "CNPJ inválido! Verifique os dados.";
+                    return;
                 }
             })
             .catch(error => {
                 console.error("Erro ao validar o CNPJ:", error);
                 divMensagem.style.display = "flex";
                 divMensagem.innerText = "Erro ao validar o CNPJ.";
+                return;
             });
     }
 
@@ -100,53 +105,88 @@ document.getElementById("cep").addEventListener("blur", async function () {
     }
 });
 
-function validarCadastroEmpresa() {
-    if (!nomeInput.value || !emailInput.value || !cepInput.value || !senhaInput.value || !numeroInput.value || !enderecoInput.value || !cnpjInput.value || !areaInput.value || !confirmSenhaInput.value) {
-        divMensagem.style.display = "flex"
-        divMensagem.innerText = "Todos os campos devem ser preenchidos."
-        return false;
-    }
-    if (cnpjInput.value.length != 14) {
+async function validarCadastroEmpresa() {
+    let cnpj = cnpjInput.value.replace(/\D/g, '');
+
+    if (cnpj.length !== 14) {
         divMensagem.style.display = "flex";
         divMensagem.innerText = "CNPJ inválido! Deve conter 14 dígitos.";
+        return false;
     }
+
+    divMensagem.style.display = "none";
+    divMensagem.innerText = "";
+
+    cnpjInput.value = cnpj
+        .replace(/^(\d{2})(\d)/, '$1.$2')
+        .replace(/^(\d{2})\.(\d{3})(\d)/, '$1.$2.$3')
+        .replace(/\.(\d{3})(\d)/, '.$1/$2')
+        .replace(/(\d{4})(\d)/, '$1-$2');
+
+    try {
+        let response = await fetch(`https://publica.cnpj.ws/cnpj/${cnpj}`);
+        let data = await response.json();
+
+        if (!data.razao_social) {
+            divMensagem.style.display = "flex";
+            divMensagem.innerText = "CNPJ inválido! Verifique os dados.";
+            return false;
+        }
+
+        console.log("CNPJ válido:", data);
+    } catch (error) {
+        console.error("Erro ao validar o CNPJ:", error);
+        divMensagem.style.display = "flex";
+        divMensagem.innerText = "Erro ao validar o CNPJ.";
+        return false;
+    }
+
+    if (!nomeInput.value || !emailInput.value || !cepInput.value || !senhaInput.value ||
+        !numeroInput.value || !enderecoInput.value || !cnpjInput.value || !areaInput.value || !confirmSenhaInput.value) {
+        divMensagem.style.display = "flex";
+        divMensagem.innerText = "Todos os campos devem ser preenchidos.";
+        return false;
+    }
+
     if (!emailInput.value.includes("@") || !emailInput.value.includes(".com")) {
-        divMensagem.style.display = "flex"
+        divMensagem.style.display = "flex";
         divMensagem.innerText = "Por favor, insira um email válido.";
         return false;
     }
+
     if (senhaInput.value.length < 8) {
-        divMensagem.style.display = "flex"
+        divMensagem.style.display = "flex";
         divMensagem.innerText = "A senha deve ter pelo menos 8 caracteres.";
         return false;
     }
     if (!/[A-Z]/.test(senhaInput.value)) {
-        divMensagem.style.display = "flex"
+        divMensagem.style.display = "flex";
         divMensagem.innerText = "A senha deve conter pelo menos uma letra maiúscula.";
         return false;
     }
     if (!/\d/.test(senhaInput.value)) {
-        divMensagem.style.display = "flex"
+        divMensagem.style.display = "flex";
         divMensagem.innerText = "A senha deve conter pelo menos um número.";
         return false;
     }
     if (!/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(senhaInput.value)) {
-        divMensagem.style.display = "flex"
+        divMensagem.style.display = "flex";
         divMensagem.innerText = "A senha deve conter pelo menos um caractere especial.";
         return false;
     }
     if (senhaInput.value !== confirmSenhaInput.value) {
-        divMensagem.style.display = "flex"
+        divMensagem.style.display = "flex";
         divMensagem.innerText = "As senhas não são iguais.";
         return false;
     }
-
     return true;
 }
-
 async function cadastrarEmpresa() {
     event.preventDefault();
-    if (!validarCadastroEmpresa()) return;
+
+    const valido = await validarCadastroEmpresa();
+
+    if (!valido) return;
 
     const nome = nomeInput.value;
     const email = emailInput.value;
@@ -173,6 +213,7 @@ async function cadastrarEmpresa() {
         const data = await response.json();
         console.log("Usuário cadastrado:", data);
 
+        
         window.location.href = "login.html";
     } catch (error) {
         console.error("Erro ao cadastrar:", error);

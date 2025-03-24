@@ -19,12 +19,6 @@
       "senha": "Abf191005!"
     },
     {
-      "id": "1091",
-      "nome": "ALE",
-      "email": "alebenefri@gmail.com",
-      "senha": "118323248701016139747"
-    },
-    {
       "id": "c1b8",
       "nome": "ALE",
       "email": "alebenefri@gmail.com",
@@ -42,61 +36,6 @@
       "endereco": "Rua Senador Nelson Carneiro - Conjunto Habitacional Santa Etelvina II, São Paulo - SP",
       "cnpj": "1",
       "area": "1"
-    },
-    {
-      "id": "04fd",
-      "nome": "Alexandre Benevides Frizon",
-      "email": "alebenefri@gmail.com",
-      "cep": "08485-300",
-      "senha": "Abf191005!",
-      "numero": "525",
-      "endereco": "Rua Senador Nelson Carneiro - Conjunto Habitacional Santa Etelvina II, São Paulo - SP",
-      "cnpj": "12.345.677/8777-77",
-      "area": "arroz"
-    },
-    {
-      "id": "7792",
-      "nome": "Alexandre Benevides Frizon",
-      "email": "alebenefri@gmail.com",
-      "cep": "08485-300",
-      "senha": "Abf191005!",
-      "numero": "525",
-      "endereco": "Rua Senador Nelson Carneiro - Conjunto Habitacional Santa Etelvina II, São Paulo - SP",
-      "cnpj": "11.111.111/1111-11",
-      "area": "Arroz"
-    },
-    {
-      "id": "0c23",
-      "nome": "Alexandre Benevides Frizon",
-      "email": "alebenefri@gmail.com",
-      "cep": "08485-300",
-      "senha": "Abf191005!",
-      "numero": "525",
-      "endereco": "Rua Senador Nelson Carneiro - Conjunto Habitacional Santa Etelvina II, São Paulo - SP",
-      "cnpj": "11.111.111/1111-11",
-      "area": "Arroz"
-    },
-    {
-      "id": "17fb",
-      "nome": "Alexandre Benevides Frizon",
-      "email": "alebenefri@gmail.com",
-      "cep": "08485-300",
-      "senha": "Abf191005!",
-      "numero": "525",
-      "endereco": "Rua Senador Nelson Carneiro - Conjunto Habitacional Santa Etelvina II, São Paulo - SP",
-      "cnpj": "11.111.111/1111-11",
-      "area": "Arroz"
-    },
-    {
-      "id": "4030",
-      "nome": "Alexandre Benevides Frizon",
-      "email": "alebenefri@gmail.com",
-      "cep": "08485-300",
-      "senha": "Abf191005!",
-      "numero": "525",
-      "endereco": "Rua Senador Nelson Carneiro - Conjunto Habitacional Santa Etelvina II, São Paulo - SP",
-      "cnpj": "45.543.915/0001-81",
-      "area": "Arroz"
     },
     {
       "id": "2179",
